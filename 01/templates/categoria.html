@@ -1,0 +1,8 @@
+<h3>Rubro:{{category.title}}</h3>
+<p ng-show="candidatos.length == 0">No hay candidatos en esta categoria</p>
+<ul class="large-12 columns">
+    <li class="panel callout radius" ng-repeat="candidato in candidatos">
+        <a href="#vote/{{candidato.idCat}}/{{candidato.id}}">Nombre: {{candidato.nombre}}</a>
+        <button data-idCat="{{candidato.idCat}}" data-id="{{candidato.id}}" ng-click="votar()">Votar</button>
+    </li>
+</ul>
